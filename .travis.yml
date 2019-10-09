@@ -1,10 +1,15 @@
 anguage: node_js
-node_js: "11"
+node_js: "12"
 cache:
   yarn: true
 
-install:
+before_install:
+  - npm install -g yarn
   - node --version
+  - npm --version
+  - yarn --version
+
+install:
   - yarn
 
 script:
