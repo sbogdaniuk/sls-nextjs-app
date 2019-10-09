@@ -32,7 +32,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
   const { users = [] } = data || {}
   return (
     <div>
-      <h1>Users</h1>
+      <h1>Users 👻</h1>
       <ul>
         {(users as User[]).map(d => (
           <li key={d.id}>
