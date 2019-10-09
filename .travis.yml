@@ -4,6 +4,7 @@ cache:
   yarn: true
 
 install:
+  - node --version
   - yarn
 
 script:
