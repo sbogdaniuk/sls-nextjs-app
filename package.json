@@ -32,6 +32,11 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "deploy": "yarn build && npx sls"
+    "lint": "tsc",
+    "ci:lint": "echo TODO LINT",
+    "ci:test": "echo TODO TEST",
+    "ci:sonar": "echo TODO SONAR",
+    "ci:build": "yarn build",
+    "ci:deploy": "sls"
   }
 }

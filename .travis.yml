@@ -1,0 +1,20 @@
+anguage: node_js
+node_js: "12"
+cache:
+  yarn: true
+
+install:
+  - yarn
+
+script:
+  - yarn ci:lint
+  - yarn ci:test
+  - yarn ci:sonar
+  - yarn ci:build
+
+deploy:
+  provider: script
+  script: yarn ci:deploy
+  skip_cleanup: true
+  on:
+    branch: master
