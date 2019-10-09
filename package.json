@@ -1,7 +1,7 @@
 {
   "name": "sls-nextjs-app",
   "version": "1.0.0",
-  "description": "Serverless nextjs application.",
+  "description": "Web application. Serverless (AWS), NextJs, ReactJs (Hooks), Apollo, GraphQL",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
