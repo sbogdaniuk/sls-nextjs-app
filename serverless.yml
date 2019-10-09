@@ -1,0 +1,4 @@
+slsNextJsApp:
+  component: serverless-next.js
+  inputs:
+    bucketName: sls-nextjs-app-bucket
