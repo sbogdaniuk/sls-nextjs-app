@@ -33,6 +33,7 @@ const Home: NextPage<Props> = ({ userAgent }) => {
   return (
     <div>
       <h1>Users 👻</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
       <ul>
         {(users as User[]).map(d => (
           <li key={d.id}>
