@@ -37,6 +37,7 @@
     "ci:test": "echo TODO TEST",
     "ci:sonar": "echo TODO SONAR",
     "ci:build": "yarn build",
-    "ci:deploy": "sls"
+    "ci:deploy": "sls",
+    "deploy": "yarn ci:lint && yarn ci:test && yarn ci:sonar && yarn ci:build && sls"
   }
 }

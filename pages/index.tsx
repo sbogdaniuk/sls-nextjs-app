@@ -2,7 +2,6 @@ import { NextPage } from 'next'
 import Link from 'next/link'
 import { useQuery } from '@apollo/react-hooks'
 
-import { withApollo } from '../lib'
 import gql from 'graphql-tag'
 
 interface Props {
@@ -33,7 +32,10 @@ const Home: NextPage<Props> = ({ userAgent }) => {
   return (
     <div>
       <h1>Users 👻</h1>
-      <p>Lorem ipsum dolor sit amet.</p>
+      <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>2019-10-16T16:51:32+03:00</p>
+      </div>
       <ul>
         {(users as User[]).map(d => (
           <li key={d.id}>
@@ -45,6 +47,15 @@ const Home: NextPage<Props> = ({ userAgent }) => {
           </li>
         ))}
       </ul>
+      <ul>
+        <li>
+          <Link href="/some/not/existing">
+            <a>
+              Page 404 (client)
+            </a>
+          </Link>
+        </li>
+      </ul>
       <footer>User Agent: {userAgent}</footer>
     </div>
   )
@@ -55,4 +66,4 @@ Home.getInitialProps = async ({ req }) => {
   return { userAgent }
 }
 
-export default withApollo(Home)
+export default Home
