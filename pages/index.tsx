@@ -35,6 +35,13 @@ const Home: NextPage<Props> = ({ userAgent }) => {
       <div>
         <p>Lorem ipsum dolor sit amet.</p>
         <p>2019-10-16T16:51:32+03:00</p>
+        <p>
+          <img
+            width={300}
+            src="/static/images/cat.webp"
+            alt="Cat"
+          />
+        </p>
       </div>
       <ul>
         {(users as User[]).map(d => (
