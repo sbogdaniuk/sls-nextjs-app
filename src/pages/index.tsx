@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { useQuery } from '@apollo/react-hooks'
 
 import gql from 'graphql-tag'
+import { Header } from '../components'
+import React from 'react'
 
 interface Props {
   userAgent: string
@@ -31,18 +33,20 @@ const Home: NextPage<Props> = ({ userAgent }) => {
   const { users = [] } = data || {}
   return (
     <div>
-      <h1>Users 👻</h1>
+      <Header />
+      <h1>NextJS, AWS, GraphQL 👻</h1>
       <div>
         <p>Lorem ipsum dolor sit amet.</p>
         <p>2019-10-16T16:51:32+03:00</p>
         <p>
           <img
             width={300}
-            src="/static/images/cat.webp"
+            src="/images/cat.webp"
             alt="Cat"
           />
         </p>
       </div>
+      <h3>Users 👥</h3>
       <ul>
         {(users as User[]).map(d => (
           <li key={d.id}>
@@ -53,15 +57,6 @@ const Home: NextPage<Props> = ({ userAgent }) => {
             </Link>
           </li>
         ))}
-      </ul>
-      <ul>
-        <li>
-          <Link href="/some/not/existing">
-            <a>
-              Page 404 (client)
-            </a>
-          </Link>
-        </li>
       </ul>
       <footer>User Agent: {userAgent}</footer>
     </div>
