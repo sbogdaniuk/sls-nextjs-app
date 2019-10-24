@@ -10,11 +10,10 @@ script:
   - yarn ci:lint
   - yarn ci:test
   - yarn ci:sonar
-  - yarn ci:build
 
 deploy:
   provider: script
-  script: yarn ci:deploy
+  script: echo DEPLOY
   skip_cleanup: true
   on:
     branch: master
